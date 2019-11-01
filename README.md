@@ -48,5 +48,7 @@ sed -i "s@#\!/bin/sh@#\!/bin/bash@" /usr/sbin/debootstrap
 ## Test it on openwrt
 ```
 mkdir ynh_chroot
+mkdir -p ynh_chroot/etc
+echo yunohost > ynh_chroot/etc/hostname
 debootstrap --arch=arm64 --include="openssh-server,ca-certificates,debhelper" --no-check-gpg --no-check-certificate --verbose yunohost ./ynh_chroot/ https://deb.debian.org/debian/
 ```
