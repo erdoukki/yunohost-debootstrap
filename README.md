@@ -18,7 +18,7 @@ sudo apt install debian-archive-keyring
 ```
 
 ## Patch debootstrap on debian
-You may need to patch debootstrap like this (not needed on ubuntu, nor on openwrt):
+You may need to patch debootstrap like this (not needed on ubuntu):
 ```
 sed -i "s@#\!/bin/bash@#\!/bin/sh@" /usr/sbin/debootstrap
 ```
@@ -37,6 +37,12 @@ opkg update
 opkg install bash debootstrap git git-http
 git clone https://github.com/YunoHost/yunohost-debootstrap
 cp yunohost-debootstrap/yunohost /usr/share/debootstrap/scripts/
+```
+
+## Patch debootstrap on openwrt
+You may need to patch debootstrap like this:
+```
+sed -i "s@#\!/bin/sh@#\!/bin/bash@" /usr/sbin/debootstrap
 ```
 
 ## Test it on openwrt
