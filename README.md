@@ -11,13 +11,13 @@ git clone https://github.com/YunoHost/yunohost-debootstrap
 sudo cp yunohost-debootstrap/yunohost /usr/share/debootstrap/scripts/
 ```
 
-## Requirements on ubuntu
+## Additional equirements on ubuntu
 
 ```
 sudo apt install debian-archive-keyring
 ```
 
-## Patch debootstrap
+## Patch debootstrap on debian
 You may need to patch debootstrap like this (not needed on ubuntu, nor on openwrt):
 ```
 sed -i "s@#\!/bin/bash@#\!/bin/sh@" /usr/sbin/debootstrap
