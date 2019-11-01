@@ -9,8 +9,14 @@ git clone https://github.com/YunoHost/yunohost-debootstrap
 sudo cp yunohost-debootstrap/yunohost /usr/share/debootstrap/scripts/
 ```
 
+## Requirements on ubuntu
+
+```
+sudo apt install debian-archive-keyring
+```
+
 ## Patch debootstrap
-You need to patch debootstrap like this:
+You may need to patch debootstrap like this (not needed on ubuntu):
 ```
 sed -i "s@#\!/bin/bash@#\!/bin/sh@" /usr/sbin/debootstrap
 ```
