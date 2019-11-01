@@ -50,5 +50,5 @@ sed -i "s@#\!/bin/sh@#\!/bin/bash@" /usr/sbin/debootstrap
 mkdir ynh_chroot
 mkdir -p ynh_chroot/etc
 echo yunohost > ynh_chroot/etc/hostname
-debootstrap --arch=arm64 --include="openssh-server,ca-certificates,debhelper" --no-check-gpg --no-check-certificate --verbose yunohost ./ynh_chroot/ https://deb.debian.org/debian/
+debootstrap --arch=arm64 --include="acpi-support-base,kbd,udev,linux-image-arm64,openssh-server,ca-certificates,debhelper" --no-check-gpg --no-check-certificate --verbose yunohost ./ynh_chroot/ https://deb.debian.org/debian/
 ```
